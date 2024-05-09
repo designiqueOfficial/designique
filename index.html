@@ -18,6 +18,7 @@
             /* primary color */
             color: #fff;
             /* text color */
+            overflow: hidden;
         }
 
         .container {
@@ -38,14 +39,14 @@
             font-weight: 600;
             color: #fff;
             line-height: 70px;
-            animation: fadeInDown 1s ease-out;
+            animation: slideInLeft 1s ease-out;
         }
 
         p {
             font-size: 18px;
             margin-bottom: 30px;
             color: #fff;
-            animation: fadeInUp 1s ease-out;
+            animation: slideInRight 1s ease-out;
         }
 
         .countdown {
@@ -66,10 +67,13 @@
             color: #ffd167;
             border: 2px solid #ffd167;
             animation: zoomIn 1s ease-out;
+            scale: 1;
         }
 
         .countdown div:hover {
-            background-color: #0f4e5a;
+            background-color: #ffd167;
+            color: #135f6f;
+            scale: 1.05;
             /* darker shade of secondary color */
         }
 
@@ -92,27 +96,27 @@
             margin: 4px 0 0 0;
         }
 
-        @keyframes fadeInDown {
+        @keyframes slideInLeft {
             from {
                 opacity: 0;
-                transform: translateY(-50px);
+                transform: translateX(-100%);
             }
 
             to {
                 opacity: 1;
-                transform: translateY(0);
+                transform: translateX(0);
             }
         }
 
-        @keyframes fadeInUp {
+        @keyframes slideInRight {
             from {
                 opacity: 0;
-                transform: translateY(50px);
+                transform: translateX(100%);
             }
 
             to {
                 opacity: 1;
-                transform: translateY(0);
+                transform: translateX(0);
             }
         }
 
@@ -183,8 +187,8 @@
             }
 
             h1 {
-                font-size: 33px;
-                margin-bottom: 20px;
+                font-size: 30px;
+                margin-bottom: 0;
                 line-height: 40px;
                 /* color: #333333; */
             }
@@ -208,6 +212,14 @@
                 max-width: 150px;
                 margin: 0 auto 20px;
                 height: 150px;
+            }
+
+            p {
+                font-size: 15px;
+                margin-bottom: 30px;
+                color: #fff;
+                animation: slideInRight 1s ease-out;
+                margin-top: 10px;
             }
         }
     </style>
