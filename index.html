@@ -38,18 +38,21 @@
             font-weight: 600;
             color: #fff;
             line-height: 70px;
+            animation: fadeInDown 1s ease-out;
         }
 
         p {
             font-size: 18px;
             margin-bottom: 30px;
             color: #fff;
+            animation: fadeInUp 1s ease-out;
         }
 
         .countdown {
             display: flex;
             justify-content: center;
             margin-top: 20px;
+            animation: fadeIn 1s ease-out;
         }
 
         .countdown div {
@@ -62,6 +65,7 @@
             transition: background-color 0.3s ease;
             color: #ffd167;
             border: 2px solid #ffd167;
+            animation: zoomIn 1s ease-out;
         }
 
         .countdown div:hover {
@@ -80,11 +84,97 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            animation: bounceIn 1s ease-out;
         }
 
         .logo img {
             width: 80%;
             margin: 4px 0 0 0;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes bounceIn {
+
+            from,
+            20%,
+            40%,
+            60%,
+            80%,
+            to {
+                animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            }
+
+            0% {
+                opacity: 0;
+                transform: scale3d(0.3, 0.3, 0.3);
+            }
+
+            20% {
+                transform: scale3d(1.1, 1.1, 1.1);
+            }
+
+            40% {
+                transform: scale3d(0.9, 0.9, 0.9);
+            }
+
+            60% {
+                opacity: 1;
+                transform: scale3d(1.03, 1.03, 1.03);
+            }
+
+            80% {
+                transform: scale3d(0.97, 0.97, 0.97);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale3d(1, 1, 1);
+            }
         }
 
         @media screen and (max-width: 600px) {
