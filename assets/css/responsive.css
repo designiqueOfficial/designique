@@ -1,4 +1,8 @@
 @media screen and (max-width: 639px) {
+    .cursor {
+        display: none !important;
+    }
+
     .fordesktop {
         display: none;
     }
@@ -236,5 +240,120 @@
 
     .contact-crev .socialicons .mr-30 {
         margin-right: 15px !important;
+    }
+
+
+    .navbar .navbar-toggler {
+        font-size: 20px;
+        border-radius: 0;
+        padding: 0;
+        margin-right: 30px;
+        position: relative !important;
+        z-index: 100 !important;
+    }
+
+    .navbar .navbar-collapse {
+        margin-top: 0 !important;
+    }
+
+    .navbar-nav {
+        position: fixed !important;
+        left: auto;
+        right: -100%;
+        background-color: white;
+        bottom: 0 !important;
+        top: 0 !important;
+        /* height: 100%; */
+        z-index: 10 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        transition: all 0.3s ease-in-out;
+        width: 100%;
+    }
+
+    .navbar .navbar-nav .nav-link {
+        font-size: 17px !important;
+        font-weight: 600 !important;
+    }
+
+    .navbar-collapse.show .navbar-nav {
+        right: 0%;
+
+    }
+
+    .collapse:not(.show) {
+        display: block !important;
+    }
+
+    .navbar-toggler {
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    .icon-bar {
+        display: block;
+        width: 25px;
+        height: 2px;
+        margin-bottom: 4px;
+        position: relative;
+        background-color: #333;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .navbar-toggler.open .icon-bar:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 0.7px);
+    }
+
+    .navbar-toggler.open .icon-bar:nth-child(2) {
+        transform: rotate(-45deg) translate(4px, 0.6px);
+    }
+
+    .navbar-toggler.open .icon-bar:nth-child(3) {
+        opacity: 0;
+    }
+
+    /* Initially */
+    .navbar-toggler:not(.open) .icon-bar:nth-child(2) {
+        width: 20px;
+    }
+
+    .header-digital .half-img-right {
+        top: auto !important;
+        left: 0 !important;
+        background-position: center bottom !important;
+        background-size: 100% !important;
+        display: block;
+        bottom: 0;
+    }
+
+    .header-digital .half-img-right {
+        position: static !important;
+        height: 310px !important;
+        background-position: center top !important;
+        background-size: 90% !important;
+        pointer-events: none;
+    }
+
+    header.full-height {
+        min-height: inherit !important;
+        padding: 50px 0 !important;
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .intro-corp .imgs .img1 {
+        width: 75% !important;
+    }
+
+    .testim-vrt .cont {
+        padding: 30px 0 !important;
+    }
+
+    .approach-carso .swiper-slide {
+        padding: 50px 30px !important;
+        border-radius: 5% !important;
     }
 }
