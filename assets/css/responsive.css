@@ -226,7 +226,19 @@
     }
 
     .custom-height {
-        height: inherit !important;
+        height: calc(100vh - 521px);
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-toggler.open .icon-bar {
+        background-color: #ffd57b !important;
+    }
+
+    .navbar .navbar-nav .nav-link {
+        /* color: #ffd57b !important; */
+        color: #fff !important;
+        border-bottom: none !important;
     }
 
     .contact-crev .socialicons {
@@ -260,7 +272,7 @@
         position: fixed !important;
         left: auto;
         right: -100%;
-        background-color: white;
+        background-color: #181818;
         bottom: 0 !important;
         top: 0 !important;
         /* height: 100%; */
