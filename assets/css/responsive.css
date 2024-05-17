@@ -280,7 +280,7 @@
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.3s cubic-bezier(0.85, 0, 0, 1);
         width: 100%;
     }
 
@@ -367,5 +367,17 @@
     .approach-carso .swiper-slide {
         padding: 50px 30px !important;
         border-radius: 5% !important;
+    }
+
+    .formobile.full-width.d-flex.justify-content-end.justify-end {
+        display: block !important;
+    }
+
+    .fordesktop {
+        display: none !important;
+    }
+
+    .socialiconsfornav {
+        display: block !important;
     }
 }

@@ -1187,7 +1187,7 @@ $(function () {
 
 $(function () {
   var width = $(window).width();
-  if (width > 991) {
+  //if (width > 991) {
     ("use strict");
 
     var wind = $(window);
@@ -1242,7 +1242,7 @@ $(function () {
         }
       });
     });
-  }
+  //}
 });
 
 $(function () {
