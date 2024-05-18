@@ -380,4 +380,8 @@
     .socialiconsfornav {
         display: block !important;
     }
+
+    .fancybox-navigation {
+        display: none !important;
+    }
 }
