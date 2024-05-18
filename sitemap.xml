@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://designique.in/</loc>
+    <lastmod>2024-05-18</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://designique.in/who-we-are</loc>
+    <lastmod>2024-05-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://designique.in/what-we-do</loc>
+    <lastmod>2024-05-18</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://designique.in/our-crew</loc>
+    <lastmod>2024-05-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://designique.in/connect-us</loc>
+    <lastmod>2024-05-18</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://designique.in/portfolio</loc>
+    <lastmod>2024-05-18</lastmod>
+    <priority>0.7</priority>
+  </url>
+</urlset>
