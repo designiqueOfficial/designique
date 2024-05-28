@@ -116,32 +116,36 @@
         height: 40px !important;
     }
 
-    .footer-container .pb-80 {
+    footer .pb-80 {
         padding-bottom: 30px !important;
     }
 
-    .footer-container .pt-80 {
+    footer .pt-80 {
         padding-top: 30px !important;
     }
 
-    .footer-container .call-box.text-center.mb-80 {
+    footer .call-box.text-center.mb-80 {
         margin-bottom: 30px !important;
     }
 
-    .footer-container .tit.mb-20,
-    .footer-container1 .tit.mb-20 {
+    footer .tit.mb-20,
+    footer .tit.mb-20 {
         margin-bottom: 0 !important;
     }
 
-    .footer-container .colum.md-mb50,
-    .footer-container1 .colum.md-mb50 {
+    footer .colum.md-mb50,
+    footer .colum.md-mb50 {
         margin-bottom: 20px !important;
     }
 
-    .footer-container .col-lg-3.md-mb50,
-    .footer-container1 .col-lg-3.md-mb50 {
+    footer .col-lg-3.md-mb50,
+    footer .col-lg-4.md-mb50 {
         margin-bottom: 0 !important;
     }
+
+    /* .md-mb50 {
+            margin-bottom: 50px !important;
+        } */
 
     .copyright.d-flex {
         justify-content: center !important;
@@ -213,7 +217,7 @@
         display: none;
     }
 
-    .footer-container1 .container.pb-80.pt-80 {
+    footer .container.pb-80.pt-80 {
         padding: 30px 15px !important;
     }
 
@@ -383,5 +387,53 @@
 
     .fancybox-navigation {
         display: none !important;
+    }
+
+    .work-header .mt-80 {
+        margin-top: 0 !important;
+    }
+
+    .work-header h1 {
+        font-size: 30px !important;
+    }
+
+    .work-header+.portfolio {
+        padding-top: 10px !important;
+        padding-bottom: 10px !important;
+    }
+
+    .portfolio .filtering .filter span {
+        margin: 5px !important;
+        display: inline-block !important;
+        border: 1px solid white !important;
+        border-radius: 50px !important;
+        padding: 5px 13px !important;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .portfolio .filtering span.text {
+        display: none !important;
+    }
+
+    .portfolio .filtering .filter {
+        padding: 0 !important;
+        width: auto !important;
+        border: none !important;
+    }
+
+    .portfolio .filtering span.active {
+        opacity: 1 !important;
+        background: #ffcf68 !important;
+        border-color: #ffcf68 !important;
+        color: #1d1d1d !important;
+    }
+
+    .portfolio .filtering {
+        margin-bottom: 30px !important;
+    }
+
+    .forshowcasepage .container.pb-80.pt-80.ontop {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
     }
 }

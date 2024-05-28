@@ -5561,12 +5561,9 @@ footer .bg-pattern {
 .portfolio .metro .info-overlay .item-img .info {
   color: #fff !important;
   position: absolute;
-  top: 50%;
-  left: 0;
-  width: 100%;
-  transform: translateY(-50%);
   overflow: hidden;
   z-index: 2;
+  inset: 0;
 }
 .portfolio .metro .info-overlay .item-img .info .tag {
   transition-delay: 0;
@@ -5636,11 +5633,18 @@ footer .bg-pattern {
   transform: translateY(100px);
   opacity: 0;
   transition: all 0.6s;
+  position: absolute;
+  inset: 0;
 }
 
 .portfolio .metro .info-overlay .item-img .info h6 a,
 .portfolio .metro .info-overlay .item-img .info .tag a {
   color: #fff !important;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .portfolio .masonry .info-overlay .item-img,
@@ -9193,4 +9197,8 @@ footer .sub-footer p {
 
 .formobile {
   display: none !important;
+}
+
+.imago {
+  pointer-events: none !important;
 }/*# sourceMappingURL=style.css.map */

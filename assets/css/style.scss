@@ -6116,14 +6116,15 @@ footer {
 				.info {
 					color: #fff !important;
 					position: absolute;
-					top: 50%;
-					left: 0;
-					width: 100%;
-					-webkit-transform: translateY(-50%);
-					-ms-transform: translateY(-50%);
-					transform: translateY(-50%);
+					// top: 50%;
+					// left: 0;
+					// width: 100%;
+					// -webkit-transform: translateY(-50%);
+					// -ms-transform: translateY(-50%);
+					// transform: translateY(-50%);
 					overflow: hidden;
 					z-index: 2;
+					inset: 0;
 					.tag {
 						-webkit-transition-delay: 0;
 						-o-transition-delay: 0;
@@ -6215,10 +6216,17 @@ footer {
 	-webkit-transition: all 0.6s;
 	-o-transition: all 0.6s;
 	transition: all 0.6s;
+	position: absolute;
+    inset: 0;
 }
 .portfolio .metro .info-overlay .item-img .info h6 a,
 .portfolio .metro .info-overlay .item-img .info .tag a {
 	color: #fff !important;
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 .portfolio .masonry .info-overlay .item-img,
 .portfolio .grid .info-overlay .item-img {
@@ -10417,8 +10425,12 @@ footer {
 	}
 }
 
-.formobile{
+.formobile {
 	display: none !important;
+}
+
+.imago {
+	pointer-events: none !important;
 }
 
 @import url(responsive.css);
