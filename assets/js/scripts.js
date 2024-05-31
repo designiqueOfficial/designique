@@ -838,8 +838,12 @@ $(function () {
             slidesPerView: 3,
           },
           1024: {
-            slidesPerView: 5,
+            slidesPerView: 6,
           },
+        },
+        navigation: {
+          nextEl: ".clients-carso .swiper-button-next",
+          prevEl: ".clients-carso .swiper-button-prev",
         },
       };
     }

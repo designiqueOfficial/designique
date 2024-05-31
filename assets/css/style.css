@@ -9201,4 +9201,24 @@ footer .sub-footer p {
 
 .imago {
   pointer-events: none !important;
+}
+
+.clients-carso {
+  position: relative;
+  background-color: #333;
+}
+.clients-carso.custompadding {
+  padding: 50px 0 0;
+}
+.clients-carso h3 {
+  color: #fff;
+}
+
+.icon-img-200 {
+  width: 200px;
+}
+@media screen and (max-width: 767px) {
+  .icon-img-200 {
+    width: 140px;
+  }
 }/*# sourceMappingURL=style.css.map */
