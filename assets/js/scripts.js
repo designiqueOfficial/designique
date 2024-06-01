@@ -1192,60 +1192,60 @@ $(function () {
 $(function () {
   var width = $(window).width();
   //if (width > 991) {
-    ("use strict");
+  ("use strict");
 
-    var wind = $(window);
+  var wind = $(window);
 
-    /* =============================================================================
+  /* =============================================================================
         -------------------------------  Smooth Footer   -------------------------------
         ============================================================================= */
 
-    gsap.set(".footer-container", { yPercent: -50 });
-    const uncover = gsap.timeline({ paused: true });
-    uncover.to(".footer-container", { yPercent: 0, ease: "none" });
+  gsap.set(".footer-container", { yPercent: -50 });
+  const uncover = gsap.timeline({ paused: true });
+  uncover.to(".footer-container", { yPercent: 0, ease: "none" });
 
-    ScrollTrigger.create({
-      trigger: "main",
-      start: "bottom bottom",
-      end: "+=50%",
-      animation: uncover,
-      scrub: true,
-    });
+  ScrollTrigger.create({
+    trigger: "main",
+    start: "bottom bottom",
+    end: "+=50%",
+    animation: uncover,
+    scrub: true,
+  });
 
-    /* =============================================================================
+  /* =============================================================================
        -------------------------------  Smooth contact   -------------------------------
        ============================================================================= */
 
-    gsap.set(".contact-container", { yPercent: -50 });
-    const cover = gsap.timeline({ paused: true });
-    cover.to(".contact-container", { yPercent: 0, ease: "none" });
+  gsap.set(".contact-container", { yPercent: -50 });
+  const cover = gsap.timeline({ paused: true });
+  cover.to(".contact-container", { yPercent: 0, ease: "none" });
 
-    ScrollTrigger.create({
-      trigger: ".main-box",
-      start: "bottom bottom",
-      end: "+=50%",
-      animation: cover,
-      scrub: true,
-    });
+  ScrollTrigger.create({
+    trigger: ".main-box",
+    start: "bottom bottom",
+    end: "+=50%",
+    animation: cover,
+    scrub: true,
+  });
 
-    /* =============================================================================
+  /* =============================================================================
         -----------------------------  Portfolio Fixed  --------------------------------
         ============================================================================= */
 
-    wind.on("scroll", function () {
-      $(".portfolio-fixed .sub-bg .cont").each(function () {
-        var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-        var bottom_of_window = $(window).scrollTop() + $(window).height();
-        var tab_id = $(this).attr("data-tab");
-        if (bottom_of_window > bottom_of_object) {
-          $("#" + tab_id).addClass("current");
-          $(this).addClass("current");
-        } else {
-          $("#" + tab_id).removeClass("current");
-          $(this).removeClass("current");
-        }
-      });
+  wind.on("scroll", function () {
+    $(".portfolio-fixed .sub-bg .cont").each(function () {
+      var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+      var bottom_of_window = $(window).scrollTop() + $(window).height();
+      var tab_id = $(this).attr("data-tab");
+      if (bottom_of_window > bottom_of_object) {
+        $("#" + tab_id).addClass("current");
+        $(this).addClass("current");
+      } else {
+        $("#" + tab_id).removeClass("current");
+        $(this).removeClass("current");
+      }
     });
+  });
   //}
 });
 
@@ -1262,10 +1262,21 @@ $(function () {
   }
 });
 
-
 document.addEventListener("DOMContentLoaded", function () {
   var navbarToggler = document.querySelector(".navbar-toggler");
   navbarToggler.addEventListener("click", function () {
     navbarToggler.classList.toggle("open");
   });
 });
+
+// Get the current URL
+let currentUrl = window.location.href;
+
+// Check if the URL ends with .html
+if (currentUrl.endsWith(".html")) {
+  // Remove the .html extension
+  let newUrl = currentUrl.replace(/\.html$/, "");
+
+  // Use history.pushState to change the URL without reloading the page
+  history.pushState(null, "", newUrl);
+}
