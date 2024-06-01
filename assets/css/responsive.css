@@ -436,4 +436,40 @@
         padding-top: 30px !important;
         padding-bottom: 30px !important;
     }
+
+    .customtesti .mb-30 {
+        margin-bottom: 10px !important;
+    }
+
+    .customtesti .info h6 {
+        margin-bottom: 0 !important;
+    }
+
+    .customtesti .item .cont {
+        padding: 10px 0 !important;
+    }
+
+    .customtesti .icon-img-80 {
+        width: 40px !important;
+        margin: 0 auto 15px !important;
+    }
+
+    .customtesti h4 {
+        font-size: 14px;
+        text-align: center;
+        /* font-style: italic; */
+    }
+
+    .customtesti .circle-120 {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    .customtesti .swiper-controls {
+        text-align: center !important;
+    }
+
+    .instaouter {
+        padding: 0 10%;
+    }
 }
