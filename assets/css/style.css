@@ -9225,4 +9225,16 @@ footer .sub-footer p {
 
 .instagram-feed {
   background-color: #333;
+}
+
+.team-crev .container {
+  padding: 0 50px;
+}
+
+@media screen and (min-width: 639px) {
+  .swiper4 .swiper-wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    transform: translate3d(0px, 0, 0) !important;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -472,4 +472,14 @@
     .instaouter {
         padding: 0 10%;
     }
+
+    .team-crev .container {
+        padding: 0 50px
+    }
+    /* @media screen and (min-width: 639px) {
+        .swiper4 .swiper-wrapper {
+        transition: auto;
+    }
+    } */
+    
 }
