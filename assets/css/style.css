@@ -9227,15 +9227,15 @@ footer .sub-footer p {
   background-color: #333;
 }
 
-.team-crev .container {
-  padding: 0 50px;
-}
-
 @media screen and (min-width: 639px) {
   .wwa .swiper4 .swiper-wrapper {
-    max-width: 1100px;
     margin: 0 auto;
     transform: translate3d(0px, 0, 0) !important;
+    justify-content: center;
+    width: 1170px !important;
+  }
+  .wwa .swiper4 .swiper-wrapper .swiper-slide {
+    width: 30.7% !important;
   }
 }
 #eapps-instagram-feed-1 .eapps-instagram-feed-header {
