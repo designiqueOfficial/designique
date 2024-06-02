@@ -1275,7 +1275,7 @@ let currentUrl = window.location.href;
 // Check if the URL ends with .html
 if (currentUrl.endsWith(".html")) {
   // Remove the .html extension
-  let newUrl = currentUrl.replace(/\.html$/, "");
+  let newUrl = currentUrl.replace(/\.html$/, "/");
 
   // Use history.pushState to change the URL without reloading the page
   history.pushState(null, "", newUrl);

@@ -160,9 +160,9 @@
         padding-bottom: 30px !important;
     }
 
-    .team-crev.section-padding.bord-thin-bottom .col-12 {
+    /* .team-crev.section-padding.bord-thin-bottom .col-12 {
         padding: 10px 25px;
-    }
+    } */
 
     .team-crev .swiper-slide .item .info {
         opacity: 1 !important;
@@ -473,13 +473,13 @@
         padding: 0 10%;
     } */
 
-    .team-crev .container {
+    /* .team-crev .container {
         padding: 0 50px
-    }
+    } */
     /* @media screen and (min-width: 639px) {
         .swiper4 .swiper-wrapper {
         transition: auto;
     }
     } */
-    
+
 }
