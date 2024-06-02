@@ -10478,4 +10478,38 @@ footer {
 		}
 	}
 }
+
+// #eapps-instagram-feed-1 .eapps-instagram-feed-header {
+// 	// background: #ffcf68 !important;
+// 	width: 389px;
+// 	margin: 0 auto 15px !important;
+// 	overflow: hidden;
+// 	border-radius: 10px;
+// }
+#eapps-instagram-feed-1 .eapps-instagram-feed-header {
+	background: transparent !important;
+}
+
+.eapps-instagram-feed-header-small .eapps-instagram-feed-header-inner {
+	flex-direction: row !important;
+}
+.eapps-instagram-feed-header-inner {
+	max-width: inherit !important;
+}
+
+.eapps-instagram-feed-container {
+	width: 100%;
+	margin: 0 0 -50px 0;
+	position: relative;
+	z-index: 999999;
+}
+
+.eapps-instagram-feed-header-inner {
+	justify-content: space-between !important;
+}
+
+.eapps-instagram-feed-posts-item-visible.eapps-instagram-feed-posts-item-loaded {
+	overflow: hidden !important;
+	border-radius: 10px !important;
+}
 @import url(responsive.css);

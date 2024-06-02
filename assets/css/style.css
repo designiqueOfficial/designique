@@ -9237,4 +9237,31 @@ footer .sub-footer p {
     margin: 0 auto;
     transform: translate3d(0px, 0, 0) !important;
   }
+}
+#eapps-instagram-feed-1 .eapps-instagram-feed-header {
+  background: transparent !important;
+}
+
+.eapps-instagram-feed-header-small .eapps-instagram-feed-header-inner {
+  flex-direction: row !important;
+}
+
+.eapps-instagram-feed-header-inner {
+  max-width: inherit !important;
+}
+
+.eapps-instagram-feed-container {
+  width: 100%;
+  margin: 0 0 -50px 0;
+  position: relative;
+  z-index: 999999;
+}
+
+.eapps-instagram-feed-header-inner {
+  justify-content: space-between !important;
+}
+
+.eapps-instagram-feed-posts-item-visible.eapps-instagram-feed-posts-item-loaded {
+  overflow: hidden !important;
+  border-radius: 10px !important;
 }/*# sourceMappingURL=style.css.map */
