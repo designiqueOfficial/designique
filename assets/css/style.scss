@@ -240,7 +240,8 @@ figure {
 }
 .main-bg {
 	// background-color: #333;
-	background-color: #035e6e;
+	// background-color: #035e6e;
+	background-color: #035b6b;
 }
 .sub-bg {
 	background-color: #ffd167;
@@ -7397,6 +7398,7 @@ header {
 		background-position: right bottom;
 		background-size: 50%;
 		pointer-events: none;
+		z-index: 0;
 	}
 	.bg-pattern {
 		background-position: center bottom;

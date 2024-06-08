@@ -257,7 +257,7 @@ figure {
 }
 
 .main-bg {
-  background-color: #035e6e;
+  background-color: #035b6b;
 }
 
 .sub-bg {
@@ -6677,6 +6677,7 @@ header.in-box {
   background-position: right bottom;
   background-size: 50%;
   pointer-events: none;
+  z-index: 0;
 }
 .header-digital .bg-pattern {
   background-position: center bottom;
