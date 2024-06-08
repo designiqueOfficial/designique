@@ -482,4 +482,49 @@
     }
     } */
 
+
+    .salemodalbg .close {
+        position: absolute !important;
+        top: 20px !important;
+        right: 27px !important;
+        scale: 0.7 !important;
+        z-index: 10;
+    }
+
+    .offer h1 {
+        font-size: 30px !important;
+        line-height: 40px !important;
+        margin: 0 0 20px !important;
+        box-shadow: -6px 6px 0px 0 rgba(0, 0, 0, 0.5) !important;
+    }
+
+    .biggest-deal {
+        color: #ffffff;
+        font-size: 21px !important;
+        line-height: 31px !important;
+        margin: 0 0 50px !important;
+    }
+
+    .contact p {
+        margin: 0 0 3px !important;
+        font-size: 20px !important;
+        line-height: 28px !important;
+    }
+
+    .salemodalbg .modal-body {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .salemodalbg .logo {
+        margin-bottom: 45px !important;
+    }
+
+    .modal-dialog.w80 {
+        max-width: max-content !important;
+        width: auto !important;
+    }
+
 }

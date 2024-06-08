@@ -3897,6 +3897,13 @@ to {
 	}
 }
 .intro-corp {
+	&.corp-home {
+		p {
+			strong {
+				display: inline-block;
+			}
+		}
+	}
 	.imgs {
 		position: relative;
 		.img1 {
@@ -10571,6 +10578,39 @@ footer {
 .active {
 	.revealtext {
 		position: relative;
+		display: inline-block;
+		.reveal {
+			// position: relative;
+			opacity: 1;
+			// animation: textFadeIn 1s forwards !important;
+			// animation-delay: 5s;
+			color: #ddd;
+			// transition: color 1s; /* Added for smooth color transition */
+		}
+		&:nth-child(2) {
+			&:before {
+				animation-delay: 1s;
+			}
+			// .reveal {
+			// 	animation-delay: 1s !important;
+			// }
+		}
+		&:nth-child(3) {
+			&:before {
+				animation-delay: 1.5s;
+			}
+			// .reveal {
+			// 	animation-delay: 1.5s !important;
+			// }
+		}
+		&:nth-child(4) {
+			&:before {
+				animation-delay: 2s;
+			}
+			// .reveal {
+			// 	animation-delay: 2s !important;
+			// }
+		}
 		&:before {
 			content: "";
 			width: 0%;
@@ -10583,14 +10623,7 @@ footer {
 			z-index: 1;
 		}
 	}
-	p.reveal {
-		// position: relative;
-		opacity: 0;
-		animation: textFadeIn 1s forwards !important;
-		animation-delay: 5s;
-		color: #035b6b;
-		transition: color 1s; /* Added for smooth color transition */
-	}
+
 	.caption {
 		h1 {
 			span {
@@ -10634,6 +10667,53 @@ footer {
 	}
 }
 
+.section-active {
+	.revealtext1 {
+		font-weight: 400;
+		position: relative;
+		display: inline-block;
+		transition: all 0.3s ease-in-out;
+		&:before {
+			content: "";
+			width: 0%;
+			/* height: 50px; */
+			background: #333;
+			position: absolute;
+			animation: blockReveal 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+			top: 0;
+			bottom: 0;
+			z-index: 1;
+		}
+		.reveal1 {
+			// position: relative;
+			opacity: 1;
+			animation: textFadeIn1 1s forwards !important;
+			// animation-delay: 5s;
+			color: #333;
+			transition: all 0.3s ease-in-out; /* Added for smooth color transition */
+		}
+	}
+}
+
+@keyframes textFadeIn1 {
+	0% {
+		// color: #035b6b;
+		// opacity: 0;
+	}
+	85% {
+		// color: #035b6b;
+		// opacity: 0;
+		font-weight: 400;
+		transition: all 0.3s ease-in-out;
+	}
+	100% {
+		font-weight: 600;
+		transition: all 0.3s ease-in-out;
+		// color: #ddd;
+		// opacity: 1;
+	}
+}
+
 .floating1 {
 	animation-name: floating1;
 	animation-duration: 3s;
@@ -10653,5 +10733,113 @@ footer {
 		transform: translate(0, -0px);
 	}
 }
+
+// sale popup
+
+$primary-color: #135f6f;
+$secondary-color: #ffd067;
+$text-color: #ffffff;
+$background-pattern: "../imgs/modalbg.png";
+.modal-dialog.w80 {
+	max-width: 1000px;
+	width: 100%;
+	// min-height: 94vh;
+	// height: 100%;
+}
+.salemodalbg {
+	background: $primary-color;
+	position: relative;
+	height: 650px;
+	text-align: center;
+	&:before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: url($background-pattern) repeat center center;
+		opacity: 0.11;
+	}
+	.logo {
+		max-width: 256px;
+		margin: 0 auto;
+		margin-bottom: 64px;
+		img {
+			width: 100%;
+		}
+	}
+	.modal-header {
+		border-bottom: none !important;
+		position: relative;
+	}
+	.close {
+		background: $secondary-color;
+		border: none;
+		width: 56px;
+		border-radius: 50%;
+		font-size: 40px;
+		font-weight: 400;
+		color: #333;
+		line-height: 24px;
+		position: relative;
+		top: -27px;
+		right: -27px;
+	}
+}
+.modal .close {
+	float: right;
+	font-size: 1.5rem;
+	font-weight: 700;
+	line-height: 1;
+	color: #000;
+	text-shadow: 0 1px 0 #fff;
+
+	padding: 1rem;
+	margin: -1rem -1rem -1rem auto;
+
+	// Opinionated: add "hand" cursor to non-disabled .close elements
+	&:not(:disabled):not(.disabled) {
+		cursor: pointer;
+	}
+}
+
+.offer h1 {
+	color: $primary-color;
+	font-size: 64px; /* Adjusted for larger size */
+	line-height: 70px;
+	margin: 0 0 46px;
+	background-color: $text-color; /* White background */
+	display: inline-block; /* Inline-block for padding */
+	padding: 10px; /* Padding inside the block */
+	// border-radius: 5px; /* Rounded corners */
+	box-shadow: -6px 6px 0px 0 rgba(0, 0, 0, 0.5) !important;
+}
+
+.biggest-deal {
+	color: $text-color;
+	font-size: 48px;
+	line-height: 55px;
+	margin: 0 0 48px;
+}
+
+.discount {
+	color: $secondary-color;
+	font-weight: bold;
+}
+
+.contact p {
+	color: $text-color;
+	margin: 0 0 12px;
+	font-size:24px;
+	line-height: 28px;
+	font-weight: bold;
+	&.email {
+		a{
+			color: $secondary-color;
+		}
+	font-weight: bold;
+	margin-bottom: 0;
+}
+}
+
+
 
 @import url(responsive.css);

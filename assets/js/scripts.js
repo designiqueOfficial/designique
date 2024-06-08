@@ -1286,3 +1286,56 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.add("active");
   }, 2800); // 2000 milliseconds = 2 seconds
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the element with the class "corp-home"
+  var corpHome = document.querySelector(".corp-home");
+  // Get the target div where you want to add the class
+  var targetDiv = document.querySelector(".corp-home");
+
+  // Function to check if an element covers 60% of the viewport
+  function isSixtyPercentInView(element) {
+    var rect = element.getBoundingClientRect();
+    var viewportHeight =
+      window.innerHeight || document.documentElement.clientHeight;
+    var visibleHeight =
+      Math.min(rect.bottom, viewportHeight) - Math.max(rect.top, 0);
+    var percentageInView = (visibleHeight / viewportHeight) * 100;
+    return percentageInView >= 60;
+  }
+
+  // Function to add class to target div when corp-home covers 60% of viewport
+  function addClassWhenSixtyPercentInView() {
+    if (isSixtyPercentInView(corpHome)) {
+      targetDiv.classList.add("section-active");
+      // Optionally, remove the event listener if the class is added once
+      window.removeEventListener("scroll", addClassWhenSixtyPercentInView);
+    }
+  }
+
+  // Add event listener for scroll event
+  window.addEventListener("scroll", addClassWhenSixtyPercentInView);
+
+  // Call the function once to check if corp-home already covers 60% of viewport on page load
+  addClassWhenSixtyPercentInView();
+
+  window.onload = () => {
+    const myModal = new bootstrap.Modal("#saleModalCenter");
+    setTimeout(function () {
+      myModal.show();
+    }, 5300); // 2000 milliseconds = 2 seconds
+  };
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  var closeModalButtons = document.querySelectorAll(".close-modal");
+
+  closeModalButtons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      var modal = bootstrap.Modal.getInstance(
+        document.getElementById("saleModalCenter")
+      );
+      modal.hide();
+    });
+  });
+});
