@@ -6179,6 +6179,7 @@ footer .bg-pattern {
 .services .item-bord2 {
   padding: 60px 40px;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 10px 5px rgb(0, 101, 119);
 }
 .services .serv-items-crev .swiper-slide {
   height: auto;
@@ -6677,10 +6678,24 @@ header.in-box {
   background-position: right bottom;
   background-size: 50%;
   pointer-events: none;
-  z-index: 0;
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
 }
 .header-digital .bg-pattern {
   background-position: center bottom;
+}
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
 }
 
 .slider {
@@ -9265,4 +9280,99 @@ footer .sub-footer p {
 .eapps-instagram-feed-posts-item-visible.eapps-instagram-feed-posts-item-loaded {
   overflow: hidden !important;
   border-radius: 10px !important;
+}
+
+@keyframes blockReveal {
+  0% {
+    width: 0%;
+    left: 0;
+  }
+  50% {
+    width: 100%;
+    left: 0;
+  }
+  100% {
+    width: 0;
+    left: 100%;
+  }
+}
+@keyframes textFadeIn {
+  0% {
+    opacity: 0;
+  }
+  85% {
+    color: #035b6b;
+    opacity: 0;
+  }
+  100% {
+    color: #ddd;
+    opacity: 1;
+  }
+}
+.active {
+  /**
+  * ----------------------------------------
+  * animation tracking-in-contract-bck
+  * ----------------------------------------
+  */
+}
+.active .revealtext {
+  position: relative;
+}
+.active .revealtext:before {
+  content: "";
+  width: 0%;
+  /* height: 50px; */
+  background: #ffd268;
+  position: absolute;
+  animation: blockReveal 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+.active p.reveal {
+  opacity: 0;
+  animation: textFadeIn 1s forwards !important;
+  animation-delay: 5s;
+  color: #035b6b;
+  transition: color 1s; /* Added for smooth color transition */
+}
+.active .caption h1 span {
+  display: block;
+  opacity: 0;
+}
+.active .caption h1 span.tracking-in-expand {
+  animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.floating1 {
+  animation-name: floating1;
+  animation-duration: 3s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating1 {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
 }/*# sourceMappingURL=style.css.map */

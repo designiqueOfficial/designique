@@ -6827,6 +6827,7 @@ footer {
 	.item-bord2 {
 		padding: 60px 40px;
 		border: 1px solid rgba(255, 255, 255, 0.1);
+		box-shadow: 0 0 10px 5px rgb(0 101 119);
 	}
 	.serv-items-crev {
 		.swiper-slide {
@@ -7398,10 +7399,25 @@ header {
 		background-position: right bottom;
 		background-size: 50%;
 		pointer-events: none;
-		z-index: 0;
+		// z-index: 0;
+		animation-name: floating;
+		animation-duration: 2s;
+		animation-iteration-count: infinite;
+		animation-timing-function: ease-in-out;
 	}
 	.bg-pattern {
 		background-position: center bottom;
+	}
+	@keyframes floating {
+		0% {
+			transform: translate(0, 0px);
+		}
+		50% {
+			transform: translate(0, 15px);
+		}
+		100% {
+			transform: translate(0, -0px);
+		}
 	}
 }
 .slider {
@@ -10519,4 +10535,123 @@ footer {
 	overflow: hidden !important;
 	border-radius: 10px !important;
 }
+
+//! block reveal Banner
+
+@keyframes blockReveal {
+	0% {
+		width: 0%;
+		left: 0;
+	}
+	50% {
+		width: 100%;
+		left: 0;
+	}
+	100% {
+		width: 0;
+		left: 100%;
+	}
+}
+
+@keyframes textFadeIn {
+	0% {
+		// color: #035b6b;
+		opacity: 0;
+	}
+	85% {
+		color: #035b6b;
+		opacity: 0;
+	}
+	100% {
+		color: #ddd;
+		opacity: 1;
+	}
+}
+
+.active {
+	.revealtext {
+		position: relative;
+		&:before {
+			content: "";
+			width: 0%;
+			/* height: 50px; */
+			background: #ffd268;
+			position: absolute;
+			animation: blockReveal 2s cubic-bezier(0.74, 0.06, 0.4, 0.92) forwards;
+			top: 0;
+			bottom: 0;
+			z-index: 1;
+		}
+	}
+	p.reveal {
+		// position: relative;
+		opacity: 0;
+		animation: textFadeIn 1s forwards !important;
+		animation-delay: 5s;
+		color: #035b6b;
+		transition: color 1s; /* Added for smooth color transition */
+	}
+	.caption {
+		h1 {
+			span {
+				display: block;
+				opacity: 0;
+				&.tracking-in-expand {
+					-webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+					animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+				}
+			}
+		}
+	}
+	/**
+ * ----------------------------------------
+ * animation tracking-in-contract-bck
+ * ----------------------------------------
+ */
+	@-webkit-keyframes tracking-in-expand {
+		0% {
+			letter-spacing: -0.5em;
+			opacity: 0;
+		}
+		40% {
+			opacity: 0.6;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+	@keyframes tracking-in-expand {
+		0% {
+			letter-spacing: -0.5em;
+			opacity: 0;
+		}
+		40% {
+			opacity: 0.6;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+}
+
+.floating1 {
+	animation-name: floating1;
+	animation-duration: 3s;
+	animation-delay: 1s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+@keyframes floating1 {
+	0% {
+		transform: translate(0, 0px);
+	}
+	50% {
+		transform: translate(0, 15px);
+	}
+	100% {
+		transform: translate(0, -0px);
+	}
+}
+
 @import url(responsive.css);

@@ -1280,3 +1280,9 @@ if (currentUrl.endsWith(".html")) {
   // Use history.pushState to change the URL without reloading the page
   history.pushState(null, "", newUrl);
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(function () {
+    document.body.classList.add("active");
+  }, 2800); // 2000 milliseconds = 2 seconds
+});
