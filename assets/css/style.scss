@@ -7397,6 +7397,18 @@ header {
 .header-digital {
 	padding: 100px 0 80px;
 	position: relative;
+	h1 {
+		span {
+			img {
+				-webkit-transition: all 330ms cubic-bezier(0.85, 0, 0, 1);
+				transition: all 330ms cubic-bezier(0.85, 0, 0, 1);
+				transition-delay: 1s;
+				width: 90px;
+				rotate: 42deg;
+				translate: -30px 0px;
+			}
+		}
+	}
 	.half-img-right {
 		position: absolute;
 		top: 0;
@@ -7424,6 +7436,19 @@ header {
 		}
 		100% {
 			transform: translate(0, -0px);
+		}
+	}
+}
+.active {
+	.header-digital {
+		h1 {
+			span {
+				img {
+					width: 60px;
+					rotate: 0deg;
+					translate: -38px -26px;
+				}
+			}
 		}
 	}
 }
@@ -10227,8 +10252,47 @@ header {
 
 /* ====================== [ End Responsive ] ====================== */
 
-.logo {
-	width: 190px;
+.logowrapper {
+	.logo {
+		width: 190px;
+		position: relative;
+		padding-top: 5px;
+		img {
+			width: 100%;
+			-webkit-transition: all 550ms cubic-bezier(0.85, 0, 0, 1);
+			transition: all 550ms cubic-bezier(0.85, 0, 0, 1);
+
+			&.onlyicon {
+				height: 50px;
+				width: 50px;
+				position: absolute;
+				filter: brightness(0) saturate(100%) invert(18%) sepia(0%) saturate(184%) hue-rotate(150deg)
+					brightness(98%) contrast(92%);
+			}
+			&.onlytext {
+				width: 150px;
+				padding: 8px 0 0 0;
+				-webkit-transform: translateY(30px);
+				transform: translateY(30px);
+			}
+		}
+		&:hover {
+			.onlyicon {
+				filter: brightness(0) saturate(100%) invert(94%) sepia(70%) saturate(1403%) hue-rotate(310deg)
+					brightness(107%) contrast(103%);
+				translate: 130.5px -18px;
+				scale: 0.6;
+			}
+			.onlytext {
+				-webkit-transform: translateY(0);
+				transform: translateY(0);
+			}
+		}
+		.overflowhidden {
+			overflow: hidden;
+			height: 38px;
+		}
+	}
 }
 
 .intro-corp {
@@ -10828,18 +10892,59 @@ $background-pattern: "../imgs/modalbg.png";
 .contact p {
 	color: $text-color;
 	margin: 0 0 12px;
-	font-size:24px;
+	font-size: 24px;
 	line-height: 28px;
 	font-weight: bold;
 	&.email {
-		a{
+		a {
 			color: $secondary-color;
 		}
-	font-weight: bold;
-	margin-bottom: 0;
-}
+		font-weight: bold;
+		margin-bottom: 0;
+	}
 }
 
+.active {
+	/* Define keyframes for onlyicon animation */
+	@keyframes onlyicon-animation {
+		0% {
+			filter: brightness(0) saturate(100%) invert(18%) sepia(0%) saturate(184%) hue-rotate(150deg) brightness(98%)
+				contrast(92%);
+			transform: translate(0, 0) scale(1);
+		}
+		50% {
+			filter: brightness(0) saturate(100%) invert(94%) sepia(70%) saturate(1403%) hue-rotate(310deg)
+				brightness(107%) contrast(103%);
+			transform: translate(130.5px, -18px) scale(0.6);
+		}
+		100% {
+			filter: brightness(0) saturate(100%) invert(18%) sepia(0%) saturate(184%) hue-rotate(150deg) brightness(98%)
+				contrast(92%);
+			transform: translate(0, 0) scale(1);
+		}
+	}
 
+	/* Define keyframes for onlytext animation */
+	@keyframes onlytext-animation {
+		0% {
+			transform: translateY(30px);
+		}
+		50% {
+			transform: translateY(0);
+		}
+		100% {
+			transform: translateY(30px);
+		}
+	}
+
+	.logowrapper img.onlyicon {
+		animation: onlyicon-animation 2.5s cubic-bezier(0.85, 0, 0, 1) 1.5s;
+		animation-fill-mode: none;
+	}
+	.logowrapper img.onlytext {
+		animation: onlytext-animation 2.5s cubic-bezier(0.85, 0, 0, 1) 1.5s;
+		animation-fill-mode: none;
+	}
+}
 
 @import url(responsive.css);

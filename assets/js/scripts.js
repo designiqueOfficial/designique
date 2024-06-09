@@ -1323,7 +1323,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const myModal = new bootstrap.Modal("#saleModalCenter");
     setTimeout(function () {
       myModal.show();
-    }, 5300); // 2000 milliseconds = 2 seconds
+    }, 7000); // 2000 milliseconds = 2 seconds
   };
 });
 
