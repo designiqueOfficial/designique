@@ -1269,23 +1269,23 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Get the current URL
-let currentUrl = window.location.href;
+// // Get the current URL
+// let currentUrl = window.location.href;
 
-// Check if the URL ends with .html
-if (currentUrl.endsWith(".html")) {
-  // Remove the .html extension
-  let newUrl = currentUrl.replace(/\.html$/, "");
+// // Check if the URL ends with .html
+// if (currentUrl.endsWith(".html")) {
+//   // Remove the .html extension
+//   let newUrl = currentUrl.replace(/\.html$/, "");
 
-  // Use history.pushState to change the URL without reloading the page
-  history.pushState(null, "", newUrl);
-}
+//   // Use history.pushState to change the URL without reloading the page
+//   history.pushState(null, "", newUrl);
+// }
 
-document.addEventListener("DOMContentLoaded", function () {
-  setTimeout(function () {
-    document.body.classList.add("active");
-  }, 2800); // 2000 milliseconds = 2 seconds
-});
+// document.addEventListener("DOMContentLoaded", function () {
+//   setTimeout(function () {
+//     document.body.classList.add("active");
+//   }, 2800); // 2000 milliseconds = 2 seconds
+// });
 
 document.addEventListener("DOMContentLoaded", function () {
   // Get the element with the class "corp-home"
