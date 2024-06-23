@@ -1281,11 +1281,11 @@ document.addEventListener("DOMContentLoaded", function () {
 //   history.pushState(null, "", newUrl);
 // }
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   setTimeout(function () {
-//     document.body.classList.add("active");
-//   }, 2800); // 2000 milliseconds = 2 seconds
-// });
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(function () {
+    document.body.classList.add("active");
+  }, 2800); // 2000 milliseconds = 2 seconds
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   // Get the element with the class "corp-home"
@@ -1319,23 +1319,23 @@ document.addEventListener("DOMContentLoaded", function () {
   // Call the function once to check if corp-home already covers 60% of viewport on page load
   addClassWhenSixtyPercentInView();
 
-  window.onload = () => {
-    const myModal = new bootstrap.Modal("#saleModalCenter");
-    setTimeout(function () {
-      myModal.show();
-    }, 7000); // 2000 milliseconds = 2 seconds
-  };
+  // window.onload = () => {
+  //   const myModal = new bootstrap.Modal("#saleModalCenter");
+  //   setTimeout(function () {
+  //     myModal.show();
+  //   }, 7000); // 2000 milliseconds = 2 seconds
+  // };
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  var closeModalButtons = document.querySelectorAll(".close-modal");
+// document.addEventListener("DOMContentLoaded", function () {
+//   var closeModalButtons = document.querySelectorAll(".close-modal");
 
-  closeModalButtons.forEach(function (button) {
-    button.addEventListener("click", function () {
-      var modal = bootstrap.Modal.getInstance(
-        document.getElementById("saleModalCenter")
-      );
-      modal.hide();
-    });
-  });
-});
+//   closeModalButtons.forEach(function (button) {
+//     button.addEventListener("click", function () {
+//       var modal = bootstrap.Modal.getInstance(
+//         document.getElementById("saleModalCenter")
+//       );
+//       modal.hide();
+//     });
+//   });
+// });
